@@ -1,5 +1,12 @@
 # API Documentation
 
+Navigasi:
+
+- [`README.md`](./README.md)
+- [`SETUP.md`](./SETUP.md)
+- [`QUICKSTART.md`](./QUICKSTART.md)
+- [`BELAJAR-PROJECT.md`](./BELAJAR-PROJECT.md)
+
 Dokumentasi ini berisi detail endpoint API yang tersedia pada project ini.
 
 Base URL lokal:

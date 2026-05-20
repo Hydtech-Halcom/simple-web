@@ -1,5 +1,12 @@
 # Quick Start
 
+Navigasi:
+
+- [`README.md`](./README.md)
+- [`SETUP.md`](./SETUP.md)
+- [`API.md`](./API.md)
+- [`BELAJAR-PROJECT.md`](./BELAJAR-PROJECT.md)
+
 Kalau ingin langsung jalan tanpa baca detail panjang, ikuti langkah ini.
 
 ## 1. Install package

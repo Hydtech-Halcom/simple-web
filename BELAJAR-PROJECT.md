@@ -1,5 +1,12 @@
 # Belajar Project Ini
 
+Navigasi:
+
+- [`README.md`](./README.md)
+- [`SETUP.md`](./SETUP.md)
+- [`QUICKSTART.md`](./QUICKSTART.md)
+- [`API.md`](./API.md)
+
 Panduan ini dibuat untuk pemula yang ingin paham alur project dari awal:
 
 1. database disiapkan

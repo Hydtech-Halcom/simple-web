@@ -4,11 +4,25 @@ Project ini adalah API sederhana berbasis `Express`, `Drizzle ORM`, dan `Supabas
 
 Panduan penting:
 
-- `README.md` : gambaran umum project
-- `SETUP.md` : langkah instalasi dari nol
-- `QUICKSTART.md` : langkah cepat menjalankan project
-- `API.md` : dokumentasi detail endpoint API
-- `BELAJAR-PROJECT.md` : panduan pemula dari database sampai data tampil di halaman
+- [`README.md`](./README.md) : gambaran umum project
+- [`SETUP.md`](./SETUP.md) : langkah instalasi dari nol
+- [`QUICKSTART.md`](./QUICKSTART.md) : langkah cepat menjalankan project
+- [`API.md`](./API.md) : dokumentasi detail endpoint API
+- [`BELAJAR-PROJECT.md`](./BELAJAR-PROJECT.md) : panduan pemula dari database sampai data tampil di halaman
+
+Daftar isi:
+
+- [Fitur](#fitur)
+- [Teknologi](#teknologi)
+- [Arsitektur Project](#arsitektur-project)
+- [Struktur Folder](#struktur-folder)
+- [Database](#database)
+- [Endpoint API](#endpoint-api)
+- [Testing API Dengan Insomnia](#testing-api-dengan-insomnia)
+- [Seeder](#seeder)
+- [Menjalankan Project](#menjalankan-project)
+- [Scripts](#scripts)
+- [Catatan](#catatan)
 
 Tujuan project:
 - belajar struktur backend sederhana

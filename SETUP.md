@@ -1,5 +1,12 @@
 # Setup Project
 
+Navigasi:
+
+- [`README.md`](./README.md)
+- [`QUICKSTART.md`](./QUICKSTART.md)
+- [`API.md`](./API.md)
+- [`BELAJAR-PROJECT.md`](./BELAJAR-PROJECT.md)
+
 Panduan ini menjelaskan cara setup project dari nol untuk pemula.
 
 ## 1. Persiapan
