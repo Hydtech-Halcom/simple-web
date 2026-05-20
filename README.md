@@ -8,6 +8,7 @@ Panduan penting:
 - [`SETUP.md`](./SETUP.md) : langkah instalasi dari nol
 - [`QUICKSTART.md`](./QUICKSTART.md) : langkah cepat menjalankan project
 - [`API.md`](./API.md) : dokumentasi detail endpoint API
+- [`ALUR-ENDPOINT.md`](./ALUR-ENDPOINT.md) : alur request untuk setiap endpoint
 - [`BELAJAR-PROJECT.md`](./BELAJAR-PROJECT.md) : panduan pemula dari database sampai data tampil di halaman
 
 Daftar isi:
@@ -18,6 +19,7 @@ Daftar isi:
 - [Struktur Folder](#struktur-folder)
 - [Database](#database)
 - [Endpoint API](#endpoint-api)
+- [Alur Endpoint](#alur-endpoint)
 - [Testing API Dengan Insomnia](#testing-api-dengan-insomnia)
 - [Seeder](#seeder)
 - [Menjalankan Project](#menjalankan-project)
@@ -81,206 +83,22 @@ Penjelasan singkat:
 - `src/db/` berisi koneksi database dan skema tabel
 - `Supabase Postgres` menyimpan data project
 
-### Alur Endpoint Users
+## Alur Endpoint
 
-#### GET `/api/users`
+`README.md` hanya menampilkan gambaran singkat arsitektur project.
 
-```text
-Browser / Insomnia
-  |
-  v
-GET /api/users
-  |
-  v
-index.js
-  |
-  v
-getUsers() di src/routes/users.js
-  |
-  v
-db.select().from(userTable)
-  |
-  v
-Supabase Postgres
-  |
-  v
-Response JSON daftar users
-```
+Untuk detail alur request setiap endpoint, buka:
 
-#### GET `/api/users/:id`
+- [`ALUR-ENDPOINT.md`](./ALUR-ENDPOINT.md)
 
-```text
-Browser / Insomnia
-  |
-  v
-GET /api/users/:id
-  |
-  v
-index.js
-  |
-  v
-getUserById() di src/routes/users.js
-  |
-  v
-db.select().from(userTable).where(...)
-  |
-  v
-Supabase Postgres
-  |
-  v
-Response JSON satu user
-```
-
-#### POST `/api/users`
-
-```text
-Browser Form / Insomnia
-  |
-  v
-POST /api/users
-Body: { "username": "budi" }
-  |
-  v
-index.js
-  |
-  v
-createUser() di src/routes/users.js
-  |
-  +--> validasi username
-  |
-  v
-db.insert(userTable).values({ username })
-  |
-  v
-Supabase Postgres
-  |
-  v
-Response JSON user baru
-```
-
-### Alur Endpoint Devices
-
-#### GET `/api/devices`
-
-```text
-Browser / Insomnia
-  |
-  v
-GET /api/devices
-  |
-  v
-index.js
-  |
-  v
-getDevices() di src/routes/devices.js
-  |
-  v
-db.select().from(deviceTable)
-  |
-  v
-Supabase Postgres
-  |
-  v
-Response JSON daftar devices
-```
-
-#### GET `/api/devices/:id`
-
-```text
-Browser / Insomnia
-  |
-  v
-GET /api/devices/:id
-  |
-  v
-index.js
-  |
-  v
-getDeviceById() di src/routes/devices.js
-  |
-  v
-db.select().from(deviceTable).where(...)
-  |
-  v
-Supabase Postgres
-  |
-  v
-Response JSON satu device
-```
-
-#### POST `/api/devices`
-
-```text
-Browser Form / Insomnia
-  |
-  v
-POST /api/devices
-Body: { "name": "Sensor A", "status": "online" }
-  |
-  v
-index.js
-  |
-  v
-createDevice() di src/routes/devices.js
-  |
-  +--> validasi name
-  +--> isi default status jika kosong
-  +--> isi updated_at otomatis
-  |
-  v
-db.insert(deviceTable).values(...)
-  |
-  v
-Supabase Postgres
-  |
-  v
-Response JSON device baru
-```
-
-### Alur Dari Halaman Browser
-
-Saat membuka `http://localhost:3000`, alurnya seperti ini:
-
-```text
-Browser buka /
-  |
-  v
-Express mengirim public/index.html
-  |
-  v
-Browser memuat public/index.js
-  |
-  v
-refreshAll()
-  |
-  +--> fetch GET /api/users
-  |
-  +--> fetch GET /api/devices
-  |
-  v
-Data tampil di halaman
-```
-
-Saat form dikirim dari halaman browser:
-
-```text
-User isi form
-  |
-  v
-public/index.js membaca input
-  |
-  v
-fetch POST ke API
-  |
-  v
-Route Express menyimpan ke database
-  |
-  v
-Response JSON ditampilkan
-  |
-  v
-Daftar data dimuat ulang
-```
+File tersebut berisi:
+- alur `GET /api/users`
+- alur `GET /api/users/:id`
+- alur `POST /api/users`
+- alur `GET /api/devices`
+- alur `GET /api/devices/:id`
+- alur `POST /api/devices`
+- alur request dari halaman browser
 
 ## Struktur Folder
 

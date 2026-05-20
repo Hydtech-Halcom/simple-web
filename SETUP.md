@@ -5,6 +5,7 @@ Navigasi:
 - [`README.md`](./README.md)
 - [`QUICKSTART.md`](./QUICKSTART.md)
 - [`API.md`](./API.md)
+- [`ALUR-ENDPOINT.md`](./ALUR-ENDPOINT.md)
 - [`BELAJAR-PROJECT.md`](./BELAJAR-PROJECT.md)
 
 Panduan ini menjelaskan cara setup project dari nol untuk pemula.

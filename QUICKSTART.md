@@ -5,6 +5,7 @@ Navigasi:
 - [`README.md`](./README.md)
 - [`SETUP.md`](./SETUP.md)
 - [`API.md`](./API.md)
+- [`ALUR-ENDPOINT.md`](./ALUR-ENDPOINT.md)
 - [`BELAJAR-PROJECT.md`](./BELAJAR-PROJECT.md)
 
 Kalau ingin langsung jalan tanpa baca detail panjang, ikuti langkah ini.

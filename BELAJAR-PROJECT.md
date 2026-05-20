@@ -6,6 +6,8 @@ Navigasi:
 - [`SETUP.md`](./SETUP.md)
 - [`QUICKSTART.md`](./QUICKSTART.md)
 - [`API.md`](./API.md)
+- [`ALUR-ENDPOINT.md`](./ALUR-ENDPOINT.md)
+
 
 Panduan ini dibuat untuk pemula yang ingin paham alur project dari awal:
 

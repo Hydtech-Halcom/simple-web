@@ -5,6 +5,7 @@ Navigasi:
 - [`README.md`](./README.md)
 - [`SETUP.md`](./SETUP.md)
 - [`QUICKSTART.md`](./QUICKSTART.md)
+- [`ALUR-ENDPOINT.md`](./ALUR-ENDPOINT.md)
 - [`BELAJAR-PROJECT.md`](./BELAJAR-PROJECT.md)
 
 Dokumentasi ini berisi detail endpoint API yang tersedia pada project ini.
