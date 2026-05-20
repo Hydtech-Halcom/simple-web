@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Web Dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Simple CRUD Demo</p>
+          <h1>Users dan Devices</h1>
+          <p class="subtitle">
+            Halaman sederhana untuk melihat data, cari data by id, dan tambah
+            data baru.
+          </p>
+        </div>
+        <button id="refreshAllButton" class="button secondary" type="button">
+          Refresh Semua Data
+        </button>
+      </header>
+
+      <section class="guide panel">
+        <h2>Cara Pakai Halaman Ini</h2>
+        <div class="guide-grid">
+          <article>
+            <h3>1. Lihat Semua Data</h3>
+            <p>
+              Klik <strong>Load Users</strong> atau <strong>Load Devices</strong>
+              untuk mengambil data dari API dan menampilkannya ke halaman.
+            </p>
+          </article>
+          <article>
+            <h3>2. Cari Data By ID</h3>
+            <p>
+              Copy salah satu ID dari daftar data, lalu tempel ke form
+              <strong>Cari User By ID</strong> atau
+              <strong>Cari Device By ID</strong>.
+            </p>
+          </article>
+          <article>
+            <h3>3. Tambah Data Baru</h3>
+            <p>
+              Isi form <strong>Tambah User</strong> atau
+              <strong>Tambah Device</strong>, lalu klik tombol simpan.
+            </p>
+          </article>
+          <article>
+            <h3>4. Lihat Hasil JSON</h3>
+            <p>
+              Setiap hasil request akan tampil di kotak hasil agar kamu bisa
+              belajar bentuk response dari API.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>Users</h2>
+              <p>Tampil semua user dari endpoint <code>/api/users</code>.</p>
+            </div>
+            <button id="loadUsersButton" class="button" type="button">
+              Load Users
+            </button>
+          </div>
+          <ul id="usersList" class="item-list"></ul>
+        </article>
+
+        <article class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>Devices</h2>
+              <p>
+                Tampil semua device dari endpoint <code>/api/devices</code>.
+              </p>
+            </div>
+            <button id="loadDevicesButton" class="button" type="button">
+              Load Devices
+            </button>
+          </div>
+          <ul id="devicesList" class="item-list"></ul>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2>Cari User By ID</h2>
+          <form id="userByIdForm" class="stack-form">
+            <label for="userIdInput">User ID</label>
+            <div class="inline-form">
+              <input
+                id="userIdInput"
+                name="id"
+                type="text"
+                placeholder="Masukkan UUID user"
+                required
+              />
+              <button class="button" type="submit">Cari User</button>
+            </div>
+          </form>
+          <pre id="userByIdResult" class="result-box">Belum ada hasil.</pre>
+        </article>
+
+        <article class="panel">
+          <h2>Cari Device By ID</h2>
+          <form id="deviceByIdForm" class="stack-form">
+            <label for="deviceIdInput">Device ID</label>
+            <div class="inline-form">
+              <input
+                id="deviceIdInput"
+                name="id"
+                type="text"
+                placeholder="Masukkan UUID device"
+                required
+              />
+              <button class="button" type="submit">Cari Device</button>
+            </div>
+          </form>
+          <pre id="deviceByIdResult" class="result-box">Belum ada hasil.</pre>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2>Tambah User</h2>
+          <form id="createUserForm" class="stack-form">
+            <label for="usernameInput">Username</label>
+            <input
+              id="usernameInput"
+              name="username"
+              type="text"
+              placeholder="Contoh: budi"
+              required
+            />
+            <button class="button" type="submit">Simpan User</button>
+          </form>
+          <pre id="createUserResult" class="result-box">Belum ada hasil.</pre>
+        </article>
+
+        <article class="panel">
+          <h2>Tambah Device</h2>
+          <form id="createDeviceForm" class="stack-form">
+            <label for="deviceNameInput">Nama Device</label>
+            <input
+              id="deviceNameInput"
+              name="name"
+              type="text"
+              placeholder="Contoh: Sensor Ruang Server"
+              required
+            />
+
+            <label for="deviceStatusInput">Status</label>
+            <select id="deviceStatusInput" name="status">
+              <option value="online">online</option>
+              <option value="offline">offline</option>
+              <option value="deleted">deleted</option>
+            </select>
+
+            <button class="button" type="submit">Simpan Device</button>
+          </form>
+          <pre id="createDeviceResult" class="result-box">Belum ada hasil.</pre>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
